@@ -6,11 +6,11 @@ public class Car {
     private int id;
     private String model;
     private String brand;
-    private Date dateOfProduction;
+    private String dateOfProduction;
     private String registrationNumber;
-    private Date nextTechnicalInspectionDate;
+    private String nextTechnicalInspectionDate;
 
-    public Car(int id, String model, String brand, Date dateOfProduction, String registrationNumber, Date nextTechnicalInspectionDate) {
+    public Car(int id, String model, String brand, String dateOfProduction, String registrationNumber, String nextTechnicalInspectionDate) {
         this.id = id;
         this.model = model;
         this.brand = brand;
@@ -18,6 +18,16 @@ public class Car {
         this.registrationNumber = registrationNumber;
         this.nextTechnicalInspectionDate = nextTechnicalInspectionDate;
     }
+
+    public Car(String brand, String model, String dateOfProduction, String registrationNumber, String nextTechnicalInspectionDate){
+        this.brand = brand;
+        this.model = model;
+        this.dateOfProduction = dateOfProduction;
+        this. registrationNumber = registrationNumber;
+        this.nextTechnicalInspectionDate = nextTechnicalInspectionDate;
+
+    }
+
     public Car(){
 
     }
@@ -43,11 +53,15 @@ public class Car {
     }
 
 
-    public Date getDateOfProduction() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDateOfProduction() {
         return dateOfProduction;
     }
 
-    public void setDateOfProduction(Date dateOfProduction) {
+    public void setDateOfProduction(String dateOfProduction) {
         this.dateOfProduction = dateOfProduction;
     }
 
@@ -59,11 +73,11 @@ public class Car {
         this.registrationNumber = registrationNumber;
     }
 
-    public Date getNextTechnicalInspectionDate() {
+    public String getNextTechnicalInspectionDate() {
         return nextTechnicalInspectionDate;
     }
 
-    public void setNextTechnicalInspectionDate(Date nextTechnicalInspectionDate) {
+    public void setNextTechnicalInspectionDate(String nextTechnicalInspectionDate) {
         this.nextTechnicalInspectionDate = nextTechnicalInspectionDate;
     }
 }

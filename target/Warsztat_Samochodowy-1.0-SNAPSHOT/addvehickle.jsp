@@ -18,7 +18,7 @@
 <div class="alert alert-success" role="alert">
     <strong>Dodaj pojazd</strong>
 </div>
-<form>
+<form action="addvehickle" method="post">
     <div class="form-group">
         <label for="formGroupInputBrand">Marka</label>
         <input type="text" class="form-control" id="formGroupInputBrand" name="brand" placeholder="marka" required>
@@ -33,7 +33,7 @@
     </div>
     <div class="form-group">
         <label for="formGroupInputRegistrationNumber">Numer rejestracyjny</label>
-        <input type="number" class="form-control" id="formGroupInputRegistrationNumber" name="registrationNumber" placeholder="Numer rejestracyjny" required>
+        <input type="text" class="form-control" id="formGroupInputRegistrationNumber" name="registrationNumber" placeholder="Numer rejestracyjny" required>
     </div>
     <div class="form-group">
         <label for="formGroupInputNextTechnicalInspectionDate">Data następnego przeglądu technicznego</label>
