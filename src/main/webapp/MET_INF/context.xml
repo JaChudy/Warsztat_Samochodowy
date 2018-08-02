@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-    <Resource name="jdbc/crm"
+    <Resource name="jdbc/mydb"
+              global="jdbc/mydb"
               auth="Container"
               type="javax.sql.DataSource"
               username="root"
               password="coderslab"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://localhost:3306/crm"
+              url="jdbc:mysql://localhost:3306/mydb"
               connectionProperties="useUnicode=yes;characterEncoding=utf8;"
               maxTotal="100"
               maxIdle="30"

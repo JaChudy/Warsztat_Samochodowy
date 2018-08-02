@@ -1,3 +1,4 @@
+
 package pl.coderslab.Employee;
 
 import javax.servlet.RequestDispatcher;
@@ -17,5 +18,6 @@ public class EmployeeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/addemployee.jsp");
         dispatcher.forward(request,response);
+
     }
 }

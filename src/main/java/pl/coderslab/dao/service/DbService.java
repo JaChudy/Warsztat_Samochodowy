@@ -11,8 +11,13 @@ public class DbService {
     private static String dbUser = "root";
     private static String dbPass = "coderslab";
 
-    private static Connection createConn() throws SQLException {
-        String connUrl = "jdbc:mysql://localhost:3306/"+dbName+"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+    public static Connection createConn() throws SQLException {
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        String connUrl = "jdbc:mysql://localhost:3306/"+dbName+"?useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
         return DriverManager.getConnection(connUrl, dbUser, dbPass);
     }
 
