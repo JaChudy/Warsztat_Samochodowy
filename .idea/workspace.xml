@@ -7,18 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec3ab382-76e6-4672-9c11-8ab2cfdbb9ef" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerEditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/editCustomer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/Employee/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/Employee/EmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/Employee/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/Employee/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/printcustomers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/printcustomers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/addcustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/addcustomer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/employeemanagment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/employeemanagment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/ordersmanagment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/ordersmanagment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/printcustomers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/printcustomers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/vehicklesmanagment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Warsztat_Samochodowy-1.0-SNAPSHOT/vehicklesmanagment.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editCustomer.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="editCustomer.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/editCustomer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            <state relative-caret-position="375">
+              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -83,8 +72,8 @@
       <file leaf-file-name="CustomerEditServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerEditServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="212">
+              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -116,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerDao.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CustomerDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+            <state relative-caret-position="372">
+              <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,9 +151,9 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/Employee/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/printcustomers.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/style/editCustomer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerEditServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/editCustomer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerEditServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerDao.java" />
       </list>
     </option>
   </component>
@@ -453,41 +442,42 @@
       <updated>1533097125227</updated>
       <workItem from="1533097130470" duration="9204000" />
       <workItem from="1533157155246" duration="11843000" />
-      <workItem from="1533188651525" duration="2464000" />
+      <workItem from="1533188651525" duration="3174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23511000" />
+    <option name="totallyTimeSpent" value="24221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="566" y="119" width="950" height="926" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32955974" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32964602" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32955974" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32955974" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32955974" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49530956" visible="true" weight="0.33960176" />
-      <window_info id="Web" order="2" sideWeight="0.5046904" side_tool="true" visible="true" weight="0.33960176" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32955974" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4934334" visible="true" weight="0.33960176" />
+      <window_info id="Web" order="6" sideWeight="0.5065666" side_tool="true" visible="true" weight="0.33960176" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -495,39 +485,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32955974" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Image Layers" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32955974" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32955974" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49718574" visible="true" weight="0.3318584" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Web" order="7" sideWeight="0.50281423" side_tool="true" visible="true" weight="0.3318584" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -732,13 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/Employee/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/service/DbService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-417">
@@ -750,16 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="12" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,17 +724,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerEditServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/editCustomer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="375">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/editCustomer.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/Employee/EmployeeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerEditServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/Customer/CustomerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
