@@ -1,6 +1,5 @@
 package pl.coderslab.Car;
 
-import pl.coderslab.Customer.Customer;
 import pl.coderslab.dao.service.DbService;
 
 import java.sql.Connection;
@@ -24,9 +23,9 @@ public class CarDao {
                 int id = rs.getInt(1);
                 String model = rs.getString(2);
                 String brand = rs.getString(3);
-                Date dateOfProduction = rs.getDate(4);
+                String dateOfProduction = rs.getString(4);
                 String registrationNumber = rs.getString(5);
-                Date nextTechnicalInspectionDate = rs.getDate(6);
+                String nextTechnicalInspectionDate = rs.getString(6);
                 cars.add(new Car(id, model, brand, dateOfProduction, registrationNumber, nextTechnicalInspectionDate));
             }
             return cars;
@@ -36,14 +35,14 @@ public class CarDao {
         }
     }
 
-    private static void insert(Car car) throws SQLException {
+    public static void insert(Car car) throws SQLException {
         String querry = "Insert INTO car VALUES (null, ?, ?, ?, ?, ?)";
         List<String> params = new ArrayList<>();
         params.add(car.getModel());
         params.add(car.getBrand());
-        params.add(car.getDateOfProduction().toString());
+        params.add(car.getDateOfProduction());
         params.add(car.getRegistrationNumber());
-        params.add(car.getNextTechnicalInspectionDate().toString());
+        params.add(car.getNextTechnicalInspectionDate());
 
         DbService.insertIntoDatabase(querry,params);
 
