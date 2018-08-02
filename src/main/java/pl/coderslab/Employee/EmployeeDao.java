@@ -11,6 +11,7 @@ import java.util.List;
 
 public class EmployeeDao {
 
+
     public static void delete(int employeeId) {
         String query = "DELETE FROM employee WHERE id =?";
         List<String> params = new ArrayList<>();
@@ -56,5 +57,5 @@ public class EmployeeDao {
         } catch (SQLException e) {
             throw e;
         }
-    }
+
 }

@@ -14,6 +14,7 @@
     <title>Tabela z klientami</title>
 </head>
 <body>
+
 <div class="alert alert-success" role="alert">
     <strong>Wyświetlono listę klientów</strong>
 </div>
@@ -29,11 +30,14 @@
             <th>Data urodzenia</th>
 
         </tr>
+
         </thead>
         <tbody>
         <c:forEach items="${customers}" var="customer">
                 <tr>
+
                     <th scope="row">${customer.id}</th>
+
                     <td>${customer.name}</td>
                     <td>${customer.lastName}</td>
                     <td>${customer.dateOfBirth}</td>

@@ -13,6 +13,50 @@ import java.util.List;
 
 public class CustomerDao {
 
+    public static Customer findByName(String name) throws Exception{
+        String querry = "Select * from customer WHERE name = ?";
+        List<String> params = new ArrayList<>();
+        params.add(name);
+        try {
+            List<String[]> result = DbService.getData(querry, params);
+
+            if(result.size()!=0 ){
+                Customer customer = new Customer();
+                customer.setId(Integer.parseInt(result.get(0)[0]));
+                customer.setName(result.get(0)[1]);
+                customer.setLastName(result.get(0)[2]);
+                customer.setDateOfBirth(result.get(0)[3]);
+                return customer;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+    public static Customer find (String customerName, String customerLastName) throws SQLException{
+        String query = "SELECT * FROM customer WHERE name =? AND lastName =?";
+        try (Connection conn = DbService.createConn()) {
+            PreparedStatement st = conn.prepareStatement(query);
+            st.setString(1, customerName);
+            st.setString(2, customerLastName);
+
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt(0);
+                String birthday = rs.getString(3);
+                return new Customer(customerName, customerLastName, birthday, id);
+            }
+        } catch (SQLException e) {
+            throw e;
+        }
+        return null;
+
+
+    }
+
     public static void delete (int customerId){
         String query = "DELETE FROM customer WHERE id =?";
         List<String> params = new ArrayList<>();
