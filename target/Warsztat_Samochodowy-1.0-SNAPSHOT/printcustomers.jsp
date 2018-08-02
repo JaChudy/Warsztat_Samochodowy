@@ -9,13 +9,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="style/tablestyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Tabela z klientami</title>
 </head>
 <body>
-    <table>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="/index.html" class="navbar-link">Strona główna</a>
+</nav>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Data urodzenia</th>
+
+        </tr>
+        </thead>
         <tbody>
-            <c:forEach items="${customers}" var="customer">
+        <c:forEach items="${customers}" var="customer">
                 <tr>
+                    <th scope="row">${customer.id}</th>
                     <td>${customer.name}</td>
                     <td>${customer.lastName}</td>
                     <td>${customer.dateOfBirth}</td>
@@ -23,6 +38,5 @@
             </c:forEach>
         </tbody>
     </table>
-
 </body>
 </html>
