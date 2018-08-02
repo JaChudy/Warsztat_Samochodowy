@@ -5,9 +5,16 @@ import java.util.Date;
 public class Customer {
     private String name;
     private String lastName;
-    private Date DateOfBirth;
+    private String dateOfBirth;
     private int id;
     //private int order_id;
+
+    public Customer(String name, String lastName, String dateOfBirth, int id) {
+        this.name = name;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.id = id;
+    }
 
     public Customer() {
     }
@@ -17,10 +24,10 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public Customer(String name, String lastName, Date dateOfBirth) {
+    public Customer(String name, String lastName, String dateOfBirth) {
         this.name = name;
         this.lastName = lastName;
-        DateOfBirth = dateOfBirth;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public int getId() {
@@ -55,11 +62,11 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public Date getDateOfBirth() {
-        return DateOfBirth;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        DateOfBirth = dateOfBirth;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 }
