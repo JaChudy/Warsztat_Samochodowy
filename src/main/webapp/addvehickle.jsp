@@ -33,7 +33,7 @@
     </div>
     <div class="form-group">
         <label for="formGroupInputRegistrationNumber">Numer rejestracyjny</label>
-        <input type="number" class="form-control" id="formGroupInputRegistrationNumber" name="registrationNumber" placeholder="Numer rejestracyjny" required>
+        <input type="text" class="form-control" id="formGroupInputRegistrationNumber" name="registrationNumber" placeholder="Numer rejestracyjny" required>
     </div>
     <div class="form-group">
         <label for="formGroupInputNextTechnicalInspectionDate">Data następnego przeglądu technicznego</label>
