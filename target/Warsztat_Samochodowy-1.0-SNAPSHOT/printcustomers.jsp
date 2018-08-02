@@ -13,9 +13,13 @@
 </head>
 <body>
     <table>
+        <thead>
+
+        </thead>
         <tbody>
             <c:forEach items="${customers}" var="customer">
                 <tr>
+                    <td>${customer.id}</td>
                     <td>${customer.name}</td>
                     <td>${customer.lastName}</td>
                     <td>${customer.dateOfBirth}</td>

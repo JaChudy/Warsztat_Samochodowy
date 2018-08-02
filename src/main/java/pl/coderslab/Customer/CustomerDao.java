@@ -13,6 +13,27 @@ import java.util.List;
 
 public class CustomerDao {
 
+    public static Customer find (String customerName, String customerLastName) throws SQLException{
+        String query = "SELECT * FROM customer WHERE name =? AND lastName =?";
+        try (Connection conn = DbService.createConn()) {
+            PreparedStatement st = conn.prepareStatement(query);
+            st.setString(1, customerName);
+            st.setString(2, customerLastName);
+
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt(0);
+                String birthday = rs.getString(3);
+                return new Customer(customerName, customerLastName, birthday, id);
+            }
+        } catch (SQLException e) {
+            throw e;
+        }
+        return null;
+
+
+    }
+
     public static void delete (int customerId){
         String querry = "DELETE FROM customer WHERE id =?";
         List<String> params = new ArrayList<>();
