@@ -18,7 +18,7 @@
 <div class="alert alert-success" role="alert">
     <strong>Dodaj zamówienie</strong>
 </div>
-<form>
+<form action="/addorder" method="post">
     <div class="form-group">
         <label for="formGroupInputAcceptanceDate">Data przyjęcia do naprawy</label>
         <input type="date" class="form-control" id="formGroupInputAcceptanceDate" name="acceptanceDate" placeholder="data przyjęcia zamówienia" required>
@@ -27,18 +27,19 @@
         <label for="formGroupInputEstimateStartDate">Planowana data rozpoczęcia naprawy</label>
         <input type="date" class="form-control" id="formGroupInputEstimateStartDate" name="estimateStartDate" placeholder="planowana data rozpoczęcia naprawy">
     </div>
-    <div class="form-group">
+  <%--  <div class="form-group">
         <label for="formGroupInputEmployeeID">ID pracownika</label>
         <input type="number" class="form-control" id="formGroupInputEmployeeID" name="employeeID" placeholder="ID pracownika">
-    </div>
+    </div>--%>
+    <%--TODO modyfikacja bazy danych--%>
     <div class="form-group">
         <label for="formGroupInputProblemDetails">Opis problemu</label>
         <input type="text" class="form-control" id="formGroupInputProblemDetails" name="problemDetails" placeholder="opis problemu" required>
     </div>
-    <div class="form-group">
+  <%--  <div class="form-group">
         <label for="formGroupInputVehickleID">ID pojazdu</label>
         <input type="number" class="form-control" id="formGroupInputVehickleID" name="vehickleID" placeholder="ID pojazdu" required>
-    </div>
+    </div>--%>
     <button type="submit" class="btn btn-primary mb-2">Prześlij</button>
 </form>
 </body>

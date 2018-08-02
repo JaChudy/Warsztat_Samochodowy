@@ -6,18 +6,20 @@ import pl.coderslab.Employee.Employee;
 import java.util.Date;
 
 public class Order{
+
+    private int id;
     /*
     * Date when car arrive
     * */
-    private Date acceptanceDate;
+    private String acceptanceDate;
     /*
     * Estimate date when car will be repaired
     * */
-    private Date estimateStartDate;
+    private String estimateStartDate;
     /*
     * Start repair car date
     * */
-    private Date startWorkDate;
+    private String startWorkDate;
     /*
     * Assigned employee for repair
     * */
@@ -26,13 +28,16 @@ public class Order{
     private String repairDetails;
     private String status;
     private Car car ;
+    private int carID;
     private float totalCostForCustomer;
     private float totalCostOfThePartsUsed;
     private float workingHourCost;
     private int workHoursCount;
+    private int employeeID;
 
 
-    public Order(Date acceptanceDate, Date estimateStartDate, Date startWorkDate, Employee employeeAssigned, String problemDetails, String repairDetails, String status, Car car, float totalCostForCustomer, float totalCostOfThePartsUsed, int workHoursCount) {
+    public Order(int id, String acceptanceDate, String estimateStartDate, String startWorkDate, Employee employeeAssigned, String problemDetails, String repairDetails, String status, Car car, float totalCostForCustomer, float totalCostOfThePartsUsed, int workHoursCount) {
+        this.id = id;
         this.acceptanceDate = acceptanceDate;
         this.estimateStartDate = estimateStartDate;
         this.startWorkDate = startWorkDate;
@@ -47,27 +52,55 @@ public class Order{
         workingHourCost = employeeAssigned.getWorkingHourCost();
     }
 
-    public Date getAcceptanceDate() {
+    public Order(int id, String acceptanceDate, String estimateStartDate, String startWorkDate, String problemDetails, String repairDetails, String status, float totalCostForCustomer, float totalCostOfThePartsUsed, int workHoursCount) {
+        this.id = id;
+        this.acceptanceDate = acceptanceDate;
+        this.estimateStartDate = estimateStartDate;
+        this.startWorkDate = startWorkDate;
+        this.problemDetails = problemDetails;
+        this.repairDetails = repairDetails;
+        this.status = status;
+        this.totalCostForCustomer = totalCostForCustomer;
+        this.totalCostOfThePartsUsed = totalCostOfThePartsUsed;
+        this.workHoursCount = workHoursCount;
+    }
+
+    public Order(String acceptanceDate, String estimateStartDate, String problemDetails, int carID, int employeeID) {
+        this.acceptanceDate = acceptanceDate;
+        this.estimateStartDate = estimateStartDate;
+        this.problemDetails = problemDetails;
+        this.carID = car.getId();
+        this.employeeID = employeeAssigned.getId();
+    }
+
+    public Order() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getAcceptanceDate() {
         return acceptanceDate;
     }
 
-    public void setAcceptanceDate(Date acceptanceDate) {
+    public void setAcceptanceDate(String acceptanceDate) {
         this.acceptanceDate = acceptanceDate;
     }
 
-    public Date getEstimateStartDate() {
+    public String getEstimateStartDate() {
         return estimateStartDate;
     }
 
-    public void setEstimateStartDate(Date estimateStartDate) {
+    public void setEstimateStartDate(String estimateStartDate) {
         this.estimateStartDate = estimateStartDate;
     }
 
-    public Date getStartWorkDate() {
+    public String getStartWorkDate() {
         return startWorkDate;
     }
 
-    public void setStartWorkDate(Date startWorkDate) {
+    public void setStartWorkDate(String startWorkDate) {
         this.startWorkDate = startWorkDate;
     }
 
