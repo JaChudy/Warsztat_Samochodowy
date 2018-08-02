@@ -3,14 +3,15 @@ package pl.coderslab.Car;
 import java.util.Date;
 
 public class Car {
-
+    private int id;
     private String model;
     private String brand;
     private Date dateOfProduction;
     private String registrationNumber;
     private Date nextTechnicalInspectionDate;
 
-    public Car(String model, String brand, Date dateOfProduction, String registrationNumber, Date nextTechnicalInspectionDate) {
+    public Car(int id, String model, String brand, Date dateOfProduction, String registrationNumber, Date nextTechnicalInspectionDate) {
+        this.id = id;
         this.model = model;
         this.brand = brand;
         this.dateOfProduction = dateOfProduction;
@@ -19,6 +20,10 @@ public class Car {
     }
     public Car(){
 
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getModel() {
