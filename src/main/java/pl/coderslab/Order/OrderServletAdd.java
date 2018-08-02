@@ -9,10 +9,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/addorder")
-public class OrderServlet extends HttpServlet {
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//
-//    }
+public class OrderServletAdd extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Order order = new Order();
+        order.setAcceptanceDate(String.valueOf(request.getParameter("acceptanceDate")));
+        order.setEstimateStartDate(String.valueOf(request.getParameter("estimateStartDate")));
+        order.setProblemDetails(String.valueOf(request.getParameter("problemDetails")));
+        try {
+            OrderDao.save(order);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/addorder.jsp");

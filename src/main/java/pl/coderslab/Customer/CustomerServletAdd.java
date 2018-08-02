@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @WebServlet("/addcustomer")
-public class CustomerServlet extends HttpServlet {
+public class CustomerServletAdd extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String lastName = request.getParameter("lastName");

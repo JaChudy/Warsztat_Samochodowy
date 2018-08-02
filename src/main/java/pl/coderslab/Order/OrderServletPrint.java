@@ -1,23 +1,28 @@
+package pl.coderslab.Order;
 
-package pl.coderslab.Employee;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 
-@WebServlet("/addemployee")
-public class EmployeeServlet extends HttpServlet {
+@WebServlet("/printorders")
+public class OrderServletPrint extends HttpServlet {
 //    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //
 //    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/addemployee.jsp");
-        dispatcher.forward(request,response);
-
+        List<Order> orders = null;
+        try {
+            orders = OrderDao.printAllOrders();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        request.setAttribute("orders", orders);
+        getServletContext().getRequestDispatcher("/printorders.jsp").forward(request,response);
     }
 }

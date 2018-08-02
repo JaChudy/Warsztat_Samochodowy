@@ -1,0 +1,8 @@
+ nav a{
+    color: dimgrey;
+    }
+ nav a:hover{
+     color: black;
+     opacity: 0.8;
+     text-decoration: none;
+ }

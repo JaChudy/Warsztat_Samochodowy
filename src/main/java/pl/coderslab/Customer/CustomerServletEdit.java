@@ -1,4 +1,4 @@
-package pl.coderslab.Employee;
+package pl.coderslab.Customer;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,22 +9,20 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet("/printemployees")
-public class EmployeeServletPrint extends HttpServlet {
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//
-//    }
+@WebServlet("/customersedit")
+public class CustomerServletEdit extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Employee> employees = null;
+        List<Customer> customers = null;
         try {
-            employees = EmployeeDao.printAllEmployees();
+            customers = CustomerDao.printAllCustomers();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
-        request.setAttribute("employees", employees);
-        getServletContext().getRequestDispatcher("/printemployees.jsp").forward(request,response);
+        request.setAttribute("customers", customers);
+        getServletContext().getRequestDispatcher("/customersedit.jsp").forward(request,response);
     }
 }

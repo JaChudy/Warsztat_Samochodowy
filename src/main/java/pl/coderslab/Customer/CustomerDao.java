@@ -58,12 +58,12 @@ public class CustomerDao {
     }
 
     public static void delete (int customerId){
-        String querry = "DELETE FROM customer WHERE id =?";
+        String query = "DELETE FROM customer WHERE id =?";
         List<String> params = new ArrayList<>();
         params.add(String.valueOf(customerId));
 
         try {
-            DbService.executeQuery(querry, params);
+            DbService.executeQuery(query, params);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -73,7 +73,7 @@ public class CustomerDao {
 
     public static void save(Customer customer) throws Exception{
 
-        String querry = "Insert INTO customer VALUES (null, ?, ?, ?)";
+        String query = "Insert INTO customer VALUES (null, ?, ?, ?)";
         List<String> params = new ArrayList<>();
         params.add(customer.getName());
         params.add(customer.getLastName());
@@ -83,15 +83,15 @@ public class CustomerDao {
         } else {
             params.add(null);
         }
-        DbService.insertIntoDatabase(querry,params);
+        DbService.insertIntoDatabase(query,params);
 
     }
 
     public static List<Customer> printAllCustomers() throws SQLException{
-        String querry ="SELECT * from customer";
+        String query ="SELECT * from customer";
 
         try(Connection conn = DbService.createConn()){
-            PreparedStatement st = conn.prepareStatement(querry);
+            PreparedStatement st = conn.prepareStatement(query);
             ResultSet rs = st.executeQuery();
             List<Customer> customers = new ArrayList<>();
             while (rs.next()) {
