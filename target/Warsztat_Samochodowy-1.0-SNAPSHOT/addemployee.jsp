@@ -20,7 +20,7 @@
 <div class="alert alert-success" role="alert">
     <strong>Dodaj pracownika</strong>
 </div>
-<form>
+<form action="/addemployee" method="post">
     <div class="form-group">
         <label for="formGroupInputFirstName">Imię</label>
         <input type="text" class="form-control" id="formGroupInputFirstName" name="name" placeholder="Imię" required>
@@ -31,11 +31,11 @@
     </div>
     <div class="form-group">
         <label for="formGroupInputNote">Notatka</label>
-        <input type="date" class="form-control" id="formGroupInputNote" name="note" placeholder="notatka">
+        <input type="text" class="form-control" id="formGroupInputNote" name="note" placeholder="notatka">
     </div>
     <div class="form-group">
         <label for="formGroupInputWorkingHourCost">Koszt roboczo godziny</label>
-        <input type="number" class="form-control" id="formGroupInputWorkingHourCost" name="note" placeholder="koszt roboczo godziny" required>
+        <input type="number" step="0.01" class="form-control" id="formGroupInputWorkingHourCost" name="workingHourCost" placeholder="koszt roboczo godziny" required>
     </div>
     <button type="submit" class="btn btn-primary mb-2">Prześlij</button>
 </form>
