@@ -26,6 +26,7 @@ public class CarServletAdd extends HttpServlet {
             e.printStackTrace();
         }
         response.sendRedirect("/success.html");
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
