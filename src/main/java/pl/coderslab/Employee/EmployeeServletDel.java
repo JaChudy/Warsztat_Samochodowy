@@ -15,7 +15,6 @@ public class EmployeeServletDel extends HttpServlet {
         int customerId = Integer.parseInt(request.getParameter("id"));
 
         EmployeeDao.delete(customerId);
-
         response.sendRedirect("/employeemanagment.html");
 
     }
