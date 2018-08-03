@@ -29,6 +29,10 @@ nav a:hover{
 #buttonName, #buttonLastName, #buttonDateOfBirth {
     width: 180px;
 }
+#inputStatus{
+    margin-left:30px;
+    width: 234px;
+}
 
 
 

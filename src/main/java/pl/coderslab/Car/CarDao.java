@@ -61,7 +61,7 @@ public class CarDao {
 
 
     public static void deleteCar (int carId) {
-        String query = "DELETE FROM car where id=?";
+        String query = "DELETE FROM car where registration_number=?";
         List<String> params = new ArrayList<>();
         params.add(String.valueOf(carId));
         try {
