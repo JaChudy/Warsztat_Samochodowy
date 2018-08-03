@@ -19,7 +19,7 @@
     <form action="delCustomer" method="post">
         <div class="form-group">
             <label for="formGroupIDInput">Podaj ID klienta, którego chcesz usunąć
-            <input type="number" min="1" class="form-control" id="formGroupIDInput" placeholder="podaj ID klienta">
+            <input type="number" name="id" min="0"  class="form-control" id="formGroupIDInput" placeholder="podaj ID klienta">
             </label>
             </br>
             <button type="submit" class="btn btn-danger">Usuń klienta</button>

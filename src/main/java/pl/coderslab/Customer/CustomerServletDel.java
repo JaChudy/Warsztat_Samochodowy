@@ -13,6 +13,8 @@ public class CustomerServletDel extends HttpServlet {
         int customerId = Integer.parseInt(request.getParameter("id"));
 
         CustomerDao.delete(customerId);
+
+        response.sendRedirect("/customersmanagement.html");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
