@@ -1,6 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -9,8 +7,11 @@
     <title>Tabela z samochodami</title>
 </head>
 <body>
+<div class="alert alert-success" role="alert">
+    <strong>Wyświetlono listę samochodów</strong>
+</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a href="/index.html" class="navbar-link">Strona gĹĂłwna</a>
+    <a href="/index.html" class="navbar-link">Strona główna</a>
 </nav>
 <table class="table table-striped">
     <thead>

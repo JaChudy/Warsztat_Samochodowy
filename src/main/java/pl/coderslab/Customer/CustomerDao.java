@@ -14,11 +14,11 @@ import java.util.List;
 public class CustomerDao {
 
     public static Customer findByName(String name) throws Exception{
-        String querry = "Select * from customer WHERE name = ?";
+        String query = "Select * from customer WHERE name = ?";
         List<String> params = new ArrayList<>();
         params.add(name);
         try {
-            List<String[]> result = DbService.getData(querry, params);
+            List<String[]> result = DbService.getData(query, params);
 
             if(result.size()!=0 ){
                 Customer customer = new Customer();
@@ -87,10 +87,10 @@ public class CustomerDao {
 
     }
 
-    public static List<Customer> printAllCustomers() throws SQLException{
-        String query ="SELECT * from customer";
+    public static List<Customer> printAllCustomers() throws SQLException {
+        String query = "SELECT * from customer";
 
-        try(Connection conn = DbService.createConn()){
+        try (Connection conn = DbService.createConn()) {
             PreparedStatement st = conn.prepareStatement(query);
             ResultSet rs = st.executeQuery();
             List<Customer> customers = new ArrayList<>();
@@ -106,8 +106,20 @@ public class CustomerDao {
         } catch (SQLException e) {
             throw e;
         }
+    }
 
+        public static void editCustomer(Customer customer) throws SQLException {
+            String query = "Update customer set name=?, lastname=?, date_of_birth=? where id=?";
+            List<String> params = new ArrayList<>();
+            params.add(customer.getName());
+            params.add(customer.getLastName());
+            if(customer.getDateOfBirth()!=null){
 
-
+                params.add(customer.getDateOfBirth());
+            } else {
+                params.add(null);
+            }
+            params.add(String.valueOf(customer.getId()));
+            DbService.executeQuery(query,params);
     }
 }
