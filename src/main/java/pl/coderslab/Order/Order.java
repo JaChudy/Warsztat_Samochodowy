@@ -65,14 +65,6 @@ public class Order{
         this.workHoursCount = workHoursCount;
     }
 
-    public Order(String acceptanceDate, String estimateStartDate, String problemDetails, int carID, int employeeID) {
-        this.acceptanceDate = acceptanceDate;
-        this.estimateStartDate = estimateStartDate;
-        this.problemDetails = problemDetails;
-        this.carID = car.getId();
-        this.employeeID = employeeAssigned.getId();
-    }
-
     public Order() {
     }
 
