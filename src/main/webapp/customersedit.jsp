@@ -10,7 +10,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style/tablestyle.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/webjars/bootstrap/4.1.3/css/bootstrap.css">
     <title>Edytuj klientów</title>
 </head>
 <body>
@@ -33,12 +33,20 @@
     </thead>
     <tbody>
     <c:forEach items="${customers}" var="customer">
-        <tr>
+        <tr id="row${customer.id}">
             <th style="vertical-align: middle;"scope="row">${customer.id}</th>
             <td style="vertical-align: middle;">${customer.name}</td>
             <td style="vertical-align: middle;">${customer.lastName}</td>
             <td style="vertical-align: middle;">${customer.dateOfBirth}</td>
-            <td style="vertical-align: middle;"><a class="btn btn-primary btn-sm" href="" role="button">Edytuj</a></td>
+            <td>
+                <form action = "/EditSpecificCustomer" style="margin-bottom: 5px" method = "post">
+                    <input type="hidden" name="id" value="${customer.id}">
+                    <input type="hidden" name="name" value="${customer.name}">
+                    <input type="hidden" name="lastName"value="${customer.lastName}">
+                    <input type="hidden" name="dateOfBirth" value="${customer.dateOfBirth}">
+                    <input type="submit" class="btn btn-primary btn-sm" value="Edytuj" />
+                </form>
+            </td>
         </tr>
     </c:forEach>
     </tbody>

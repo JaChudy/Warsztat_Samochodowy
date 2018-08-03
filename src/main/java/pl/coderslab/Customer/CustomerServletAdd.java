@@ -37,7 +37,7 @@ public class CustomerServletAdd extends HttpServlet {
 
         //CustomerServise.add(name, lastName, birthday);
 
-        response.sendRedirect("/addcustomer.jsp");
+        response.sendRedirect("/customersmanagement.html");
 
     }
 
