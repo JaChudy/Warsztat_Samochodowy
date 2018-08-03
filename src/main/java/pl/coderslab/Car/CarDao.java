@@ -45,6 +45,21 @@ public class CarDao {
         DbService.insertIntoDatabase(querry,params);
 
     }
+
+    public static void update(Car car) throws SQLException {
+        String query = "Update car set model=?, brand=?, date_of_prodution=?, next_technical_inspection_date=? where registration_number=?";
+        List<String> params = new ArrayList<>();
+        params.add(car.getModel());
+        params.add(car.getBrand());
+        params.add(car.getDateOfProduction());
+        params.add(car.getNextTechnicalInspectionDate());
+        params.add(car.getRegistrationNumber());
+        DbService.executeQuery(query,params);
+    }
+
+
+
+
     public static void deleteCar (int carId) {
         String query = "DELETE FROM car where id=?";
         List<String> params = new ArrayList<>();
