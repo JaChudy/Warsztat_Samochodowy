@@ -40,9 +40,9 @@
     <c:forEach items="${orders}" var="order">
         <tr>
             <th scope="row">${order.id}</th>
-            <td>${order.id}</td>
             <td>${order.acceptanceDate}</td>
             <td>${order.estimateStartDate}</td>
+            <td>${order.startWorkDate}</td>
             <td>${order.problemDetails}</td>
             <td>${order.repairDetails}</td>
             <td>${order.status}</td>

@@ -18,8 +18,8 @@
 </div>
 <form action="CarServletDelete" method="post">
     <div class="form-group">
-        <label for="formGroupIDInput">Podaj ID pojazdu, który chcesz usunąć
-            <input type="number" name="id" min="0"  class="form-control" id="formGroupIDInput" placeholder="podaj ID pojazdu">
+        <label for="formGroupIDInput">Podaj numer rejestracyjny pojazdu, który chcesz usunąć
+            <input type="number" name="id" min="0"  class="form-control" id="formGroupIDInput" placeholder="podaj numer rejestracyjny pojazdu">
         </label>
         </br>
         <button type="submit" class="btn btn-danger">Usuń pojazd</button>
