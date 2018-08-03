@@ -58,5 +58,16 @@ public class EmployeeDao {
             throw e;
         }
     }
+    public static void editEmployee(Employee employee) throws SQLException {
+        String query = "Update employee set name=?, lastname=?, note=?, working_hour_cost=? where id=?";
+        List<String> params = new ArrayList<>();
+        params.add(employee.getName());
+        params.add(employee.getLastName());
+        params.add(employee.getNote());
+        params.add(String.valueOf(employee.getWorkingHourCost()));
+        params.add(String.valueOf(employee.getId()));
+        DbService.executeQuery(query,params);
+    }
+
 
 }
