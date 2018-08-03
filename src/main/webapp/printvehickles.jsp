@@ -16,11 +16,10 @@
 <table class="table table-striped">
     <thead>
     <tr>
-        <th>ID</th>
+        <th>Numer rejestracyjny</th>
         <th>Model</th>
         <th>Marka</th>
         <th>Rok produkcji</th>
-        <th>Numer rejestracyjny</th>
         <th>Data nastepnej wizyty</th>
 
     </tr>
@@ -28,11 +27,10 @@
     <tbody>
     <c:forEach items="${cars}" var="vehicle">
         <tr>
-            <th scope="row">${vehicle.id}</th>
+            <th scope="row">${vehicle.registrationNumber}</th>
             <td>${vehicle.model}</td>
             <td>${vehicle.brand}</td>
             <td>${vehicle.dateOfProduction}</td>
-            <td>${vehicle.registrationNumber}</td>
             <td>${vehicle.nextTechnicalInspectionDate}</td>
         </tr>
     </c:forEach>
