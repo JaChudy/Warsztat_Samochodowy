@@ -14,7 +14,7 @@ import java.util.List;
 public class CustomerDao {
 
     public static Customer findByName(String name) throws Exception{
-        String query = "Select * from customer WHERE name = ?";
+        String query = "Select name, lastname, date_of_birth from customer WHERE name = ?";
         List<String> params = new ArrayList<>();
         params.add(name);
         try {
