@@ -66,4 +66,35 @@ public class OrderDao {
             e.printStackTrace();
         }
     }
+
+    public static void update(Order order) throws Exception {
+
+        String query = "Update mydb.order set " +
+                "acceptance_date=?," +
+                "estimate_start_date=?," +
+                "start_work_date=?," +
+                "problem_details=?," +
+                "repair_details=?," +
+                "status=?," +
+                "total_cost_for_customers=?," +
+                "total_cost_of_the_parts_used=?," +
+                "work_hours_count=?" +
+                "where id=?";
+        List<String> params = new ArrayList<>();
+        params.add(order.getAcceptanceDate());
+        params.add(order.getEstimateStartDate());
+        params.add(order.getStartWorkDate());
+        params.add(order.getProblemDetails());
+        params.add(order.getRepairDetails());
+        params.add(order.getStatus());
+        params.add(String.valueOf(order.getTotalCostForCustomer()));
+        params.add(String.valueOf(order.getTotalCostOfThePartsUsed()));
+        params.add(String.valueOf(order.getWorkHoursCount()));
+        params.add(String.valueOf(order.getId()));
+
+        DbService.executeQuery(query, params);
+
+    }
+
+
 }
