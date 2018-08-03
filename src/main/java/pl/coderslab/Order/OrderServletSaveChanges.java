@@ -20,16 +20,28 @@ public class OrderServletSaveChanges extends HttpServlet {
         float totalCostForCustomer = Float.parseFloat(request.getParameter("totalCostForCustomer"));
         float totalCostOfThePartsUsed = Float.parseFloat(request.getParameter("totalCostOfThePartsUsed"));
         int workHoursCount = Integer.parseInt(request.getParameter("workHoursCount"));
-
+//        if(acceptanceDate=="")
+//        {
+//            acceptanceDate = "0000-00-00";
+//        }
+//        if(estimateStartDate=="")
+//        {
+//            estimateStartDate = "0000-00-00";
+//        }
+//        if(startWorkDate=="")
+//        {
+//            startWorkDate = "0000-00-00";
+//        }
         Order order = new Order(id,acceptanceDate,estimateStartDate,
                 startWorkDate,problemDetails,repairDetails,
                 status,totalCostForCustomer,totalCostOfThePartsUsed,workHoursCount);
         try {
-            OrderDao.save(order);
+            OrderDao.update(order);
+            response.sendRedirect("/success.html");
         } catch (Exception e) {
             e.printStackTrace();
+            response.sendRedirect("/index.html");
         }
-        response.sendRedirect("/index.html");
     }
 
 

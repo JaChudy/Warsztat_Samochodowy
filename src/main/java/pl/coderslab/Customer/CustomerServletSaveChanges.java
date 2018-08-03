@@ -24,10 +24,10 @@ public class CustomerServletSaveChanges extends HttpServlet {
 
         try {
             CustomerDao.editCustomer(customer);
+            response.sendRedirect("/success.html");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/index.html");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

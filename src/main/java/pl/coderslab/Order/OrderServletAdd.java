@@ -17,8 +17,10 @@ public class OrderServletAdd extends HttpServlet {
         order.setProblemDetails(String.valueOf(request.getParameter("problemDetails")));
         try {
             OrderDao.save(order);
+            response.sendRedirect("/success.html");
         } catch (Exception e) {
             e.printStackTrace();
+            response.sendRedirect("/index.html");
         }
     }
 

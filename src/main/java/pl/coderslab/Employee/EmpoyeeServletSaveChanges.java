@@ -21,6 +21,7 @@ public class EmpoyeeServletSaveChanges extends HttpServlet {
 
         try {
             EmployeeDao.editEmployee(employee);
+            response.sendRedirect("/success.html");
         } catch (SQLException e) {
             e.printStackTrace();
         }

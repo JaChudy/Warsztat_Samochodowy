@@ -25,7 +25,7 @@ public class CarServletAdd extends HttpServlet {
         } catch (Exception e){
             e.printStackTrace();
         }
-        response.sendRedirect("/addvehickle.jsp");
+        response.sendRedirect("/success.html");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
