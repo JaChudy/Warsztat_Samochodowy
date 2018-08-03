@@ -69,7 +69,7 @@ public class OrderDao {
 
     public static void update(Order order) throws Exception {
 
-        String query = "Update mydb.order set " +
+        String query = "Update `order` set " +
                 "acceptance_date=?," +
                 "estimate_start_date=?," +
                 "start_work_date=?," +

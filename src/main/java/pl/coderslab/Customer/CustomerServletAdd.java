@@ -18,27 +18,14 @@ public class CustomerServletAdd extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String date = request.getParameter("dateOfBirth");
 
-//        Date birthday = null;
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//        try{
-//            birthday = sdf.parse(date);
-//        } catch (ParseException ignore){
-//
-//        }
-
         Customer customer = new Customer(name, lastName, date);
 
         try {
             CustomerDao.save(customer);
+            response.sendRedirect("/success.html");
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-        //CustomerServise.add(name, lastName, birthday);
-
-        response.sendRedirect("/customersmanagement.html");
-
     }
 
 

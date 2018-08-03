@@ -22,7 +22,7 @@ public class CarServletSaveChanges extends HttpServlet {
         Car car = new Car(model,brand,dateOfProduction,registrationNumber,nextTechnicalInspectionDate);
         try {
             CarDao.update(car);
-            response.sendRedirect("/index.html");
+            response.sendRedirect("/success.html");
         } catch (SQLException e) {
             e.printStackTrace();
         }

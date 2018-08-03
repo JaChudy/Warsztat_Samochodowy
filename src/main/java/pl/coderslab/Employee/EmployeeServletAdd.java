@@ -21,6 +21,7 @@ public class EmployeeServletAdd extends HttpServlet {
 
         try {
             EmployeeDao.save(employee);
+            response.sendRedirect("/success.html");
         } catch (Exception e) {
             e.printStackTrace();
         }
