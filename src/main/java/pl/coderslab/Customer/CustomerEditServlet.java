@@ -21,6 +21,7 @@ public class CustomerEditServlet extends HttpServlet {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
 
 

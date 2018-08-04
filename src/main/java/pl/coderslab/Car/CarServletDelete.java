@@ -12,12 +12,12 @@ public class CarServletDelete extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int carId = Integer.parseInt(request.getParameter("id"));
 
-        CarDao.deleteCar(carId);
-        response.sendRedirect("/vehicklesmanagment.html");
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        try {
+            CarDao.deleteCar(carId);
+            response.sendRedirect("/success.html");
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.sendRedirect("/oops.html");
+        }
     }
 }

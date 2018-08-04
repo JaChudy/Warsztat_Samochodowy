@@ -21,6 +21,7 @@ public class CarServletEdit extends HttpServlet {
             cars = CarDao.printAllCars();
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
         request.setAttribute("cars", cars);
         getServletContext().getRequestDispatcher("/carsedit.jsp").forward(request,response);

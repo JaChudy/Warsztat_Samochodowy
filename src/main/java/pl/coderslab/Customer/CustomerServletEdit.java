@@ -21,6 +21,8 @@ public class CustomerServletEdit extends HttpServlet {
             customers = CustomerDao.printAllCustomers();
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
+
         }
         request.setAttribute("customers", customers);
         getServletContext().getRequestDispatcher("/customersedit.jsp").forward(request,response);

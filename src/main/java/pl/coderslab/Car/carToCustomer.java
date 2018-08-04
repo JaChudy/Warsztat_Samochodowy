@@ -28,6 +28,7 @@ public class carToCustomer extends HttpServlet {
             customers = CustomerDao.printAllCustomers();
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
         request.setAttribute("customers", customers);
         getServletContext().getRequestDispatcher("/carToUser.jsp").forward(request,response);

@@ -14,9 +14,13 @@ public class EmployeeServletDel extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int customerId = Integer.parseInt(request.getParameter("id"));
 
-        EmployeeDao.delete(customerId);
-        response.sendRedirect("/employeemanagment.html");
-
+        try {
+            EmployeeDao.delete(customerId);
+            response.sendRedirect("/employeemanagment.html");
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.sendRedirect("/oops.html");
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
