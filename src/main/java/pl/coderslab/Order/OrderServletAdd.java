@@ -15,6 +15,15 @@ public class OrderServletAdd extends HttpServlet {
         order.setAcceptanceDate(String.valueOf(request.getParameter("acceptanceDate")));
         order.setEstimateStartDate(String.valueOf(request.getParameter("estimateStartDate")));
         order.setProblemDetails(String.valueOf(request.getParameter("problemDetails")));
+        order.setRepairDetails(request.getParameter("repaidDetails"));
+        order.setStatus(request.getParameter("status"));
+        order.setTotalCostForCustomer(Float.parseFloat(request.getParameter("totalCostCustomers")));
+        order.setTotalCostOfThePartsUsed(Float.parseFloat(request.getParameter("totalCostParts")));
+        order.setWorkHoursCount(Integer.parseInt(request.getParameter("totalWorkHours")));
+        order.setCustomerId(Integer.parseInt(request.getParameter("customerId")));
+        order.setEmployeeID(Integer.parseInt(request.getParameter("employeeId")));
+        order.setCarRegNumber(Integer.parseInt(request.getParameter("carReg")));
+
         try {
             OrderDao.save(order);
             response.sendRedirect("/success.html");

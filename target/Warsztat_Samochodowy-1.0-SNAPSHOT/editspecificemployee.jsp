@@ -1,0 +1,93 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: leszek
+  Date: 03.08.18
+  Time: 12:17
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="style/editformstyle.css">
+</head>
+<body>
+<div class="alert alert-warning" role="alert">
+    <strong>Uwaga!</strong> Modyfikacja pracownika jest nieodwracalna.
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="/index.html" class="navbar-link">Strona główna</a>
+</nav>
+<form action="/EmployeeSaveChanges" method="post">
+    <div class="form-group row">
+        <div class="form-inline">
+            <input id= "inputID" type="text" class="form-control" value="${employee.id}" name="id" disabled>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="form-inline">
+            <input id="inputName" type="text" class="form-control" value="${employee.name}" name="name" disabled>
+            <button id="buttonName" type="button" class="btn btn-warning">Zmień imię</button>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="form-inline">
+            <input id="inputLastName" type="text" class="form-control" value="${employee.lastName}" name="lastName"disabled>
+            <button id="buttonLastName" type="button" class="btn btn-warning">Zmień nazwisko</button>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="form-inline">
+            <input id="inputNote" type="text" class="form-control" value="${employee.note}" name="note" disabled>
+            <button id="buttonNote" type="button" class="btn btn-warning">Zmień notatkę</button>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="form-inline">
+            <input id="inputWorkingHourCost" type="number" step="0.01" class="form-control" value="${employee.workingHourCost}" name="workingHourCost" disabled>
+            <button id="buttonWorkingHourCost" type="button" class="btn btn-warning">Zmień cene roboczogodziny</button>
+        </div>
+    </div>
+    <button id="submit" type="submit" class="btn btn-primary mb-2" disabled>Prześlij</button>
+</form>
+
+<script src="/webjars/jquery/3.3.1/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#buttonName").click(function(){
+            $("#inputName").prop('disabled', false);
+            $("#submit").prop('disabled', false);
+        });
+    });
+    $(document).ready(function(){
+        $("#buttonLastName").click(function(){
+            $("#inputLastName").prop('disabled', false);
+            $("#submit").prop('disabled', false);
+        });
+    });
+    $(document).ready(function(){
+        $("#buttonNote").click(function(){
+            $("#inputNote").prop('disabled', false);
+            $("#submit").prop('disabled', false);
+        });
+    });
+    $(document).ready(function(){
+        $("#buttonWorkingHourCost").click(function(){
+            $("#inputWorkingHourCost").prop('disabled', false);
+            $("#submit").prop('disabled', false);
+        });
+    });
+    $(document).ready(function(){
+        $("#submit").click(function(){
+            $("#inputID").prop('disabled', false);
+            $("#inputName").prop('disabled', false);
+            $("#inputLastName").prop('disabled', false);
+            $("#inputNote").prop('disabled', false);
+            $("#inputWorkingHourCost").prop('disabled', false);
+
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: leszek
@@ -36,7 +37,43 @@
         <label for="formGroupInputProblemDetails">Opis problemu</label>
         <input type="text" class="form-control" id="formGroupInputProblemDetails" name="problemDetails" placeholder="opis problemu" required>
     </div>
-  <%--  <div class="form-group">
+    <div class="form-group">
+        <label for="formGroupRepairProblemDetails">Szczególy naprawy</label>
+        <input type="text" class="form-control" name="repaidDetails" id="formGroupRepairProblemDetails"  placeholder="szczegóły naprawy" required>
+    </div>
+    <div class="form-group">
+        <label for="formGroupStatus">Staus sprawy</label>
+        <input type="text" class="form-control" name="status" id="formGroupStatus"  placeholder="status naprawy" required>
+    </div>
+    <div class="form-group">
+        <label for="formTotalCostCustomers">Koszt naprawy</label>
+        <input type="number" step="0.01" class="form-control" name="totalCostCustomers" id="formTotalCostCustomers"  placeholder="koszt naprawy" required>
+    </div>
+    <div class="form-group">
+        <label for="formTotalCostParts">Koszt części</label>
+        <input type="number" step="0.01" class="form-control" name="totalCostParts" id="formTotalCostParts"  placeholder="koszt części" required>
+    </div>
+    <div class="form-group">
+        <label for="formWorkHours">Ilosc godzin pracy</label>
+        <input type="number"  class="form-control" name="totalWorkHours" id="formWorkHours"  placeholder="Ilość godzin pracy" required>
+    </div>
+    <div class="form-group">
+        <label for="formCustomerId">Id klienta</label>
+        <input type="number"  class="form-control" name="customerId" id="formCustomerId"  placeholder="id klienta" required>
+    </div>
+    <div class="form-group">
+        <label for="formEmployeeId">Id pracownika</label>
+        <input type="number"  class="form-control" name="employeeId" id="formEmployeeId"  placeholder="id pracownika" required>
+    </div>
+    <div class="form-group">
+        <label for="formCarRegistrationNumber">Numer rejestracyjny</label>
+        <input type="number"  class="form-control" name="carReg" id="formCarRegistrationNumber"  placeholder="numer rejestracyjny" required>
+    </div>
+
+
+
+
+<%--  <div class="form-group">
         <label for="formGroupInputVehickleID">ID pojazdu</label>
         <input type="number" class="form-control" id="formGroupInputVehickleID" name="vehickleID" placeholder="ID pojazdu" required>
     </div>--%>

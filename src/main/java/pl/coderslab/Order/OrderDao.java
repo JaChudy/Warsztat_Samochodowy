@@ -16,11 +16,14 @@ public class OrderDao {
         /*
         * IMPORTANT don't change mydb.order or `order` to order
         * */
-        String query = "Insert INTO mydb.order (`acceptance_date`,`estimate_start_date`,`problem_details`) VALUES (? , ?, ?)";
+        String query = "Insert INTO mydb.order (`acceptance_date`,`estimate_start_date`,`problem_details`,`customerid`, `employeeid`, `car_registration_number`) VALUES (? , ?, ?, ?, ?, ?)";
         List<String> params = new ArrayList<>();
         params.add(order.getAcceptanceDate());
         params.add(order.getEstimateStartDate());
         params.add(order.getProblemDetails());
+        params.add(String.valueOf(order.getCustomerId()));
+        params.add(String.valueOf(order.getEmployeeID()));
+        params.add(String.valueOf(order.getCarRegNumber()));
         DbService.insertIntoDatabase(query, params);
 
     }

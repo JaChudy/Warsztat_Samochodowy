@@ -34,7 +34,40 @@ public class Order{
     private float workingHourCost;
     private int workHoursCount;
     private int employeeID;
+    private int customerId;
+    private int carRegNumber;
 
+    public int getCarRegNumber() {
+        return carRegNumber;
+    }
+
+    public void setCarRegNumber(int carRegNumber) {
+        this.carRegNumber = carRegNumber;
+    }
+
+    public int getCarID() {
+        return carID;
+    }
+
+    public void setCarID(int carID) {
+        this.carID = carID;
+    }
+
+    public int getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
 
     public Order(int id, String acceptanceDate, String estimateStartDate, String startWorkDate, Employee employeeAssigned, String problemDetails, String repairDetails, String status, Car car, float totalCostForCustomer, float totalCostOfThePartsUsed, int workHoursCount) {
         this.id = id;
