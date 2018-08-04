@@ -26,7 +26,6 @@ public class EmpoyeeServletSaveChanges extends HttpServlet {
             e.printStackTrace();
             response.sendRedirect("/oops.html");
         }
-        response.sendRedirect("/index.html");
     }
 
 
