@@ -24,6 +24,7 @@ public class CarServletPrint extends HttpServlet {
             cars = CarDao.printAllCars();
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
 
 

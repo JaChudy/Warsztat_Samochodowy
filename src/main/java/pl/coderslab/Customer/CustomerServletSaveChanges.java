@@ -27,6 +27,7 @@ public class CustomerServletSaveChanges extends HttpServlet {
             response.sendRedirect("/success.html");
         } catch (Exception e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
     }
 

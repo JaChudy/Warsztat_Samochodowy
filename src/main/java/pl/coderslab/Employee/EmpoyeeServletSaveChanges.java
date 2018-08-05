@@ -24,8 +24,8 @@ public class EmpoyeeServletSaveChanges extends HttpServlet {
             response.sendRedirect("/success.html");
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
-        response.sendRedirect("/index.html");
     }
 
 

@@ -34,7 +34,7 @@ public class OrderServletAdd extends HttpServlet {
             response.sendRedirect("/success.html");
         } catch (Exception e) {
             e.printStackTrace();
-            response.sendRedirect("/index.html");
+            response.sendRedirect("/oops.html");
         }
     }
 

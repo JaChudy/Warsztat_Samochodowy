@@ -16,7 +16,7 @@ public class CustumerServletEditSpecific extends HttpServlet {
             id = Integer.parseInt(request.getParameter("id"));
         } catch (NumberFormatException e) {
             e.printStackTrace();
-            response.sendRedirect("/index.html");
+            response.sendRedirect("/oops.html");
         }
         String name = request.getParameter("name");
         String lastName = request.getParameter("lastName");

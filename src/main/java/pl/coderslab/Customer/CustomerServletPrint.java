@@ -23,6 +23,8 @@ public class CustomerServletPrint extends HttpServlet {
             customers = CustomerDao.printAllCustomers();
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
+
         }
 
 

@@ -1,5 +1,7 @@
 package pl.coderslab.Car;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet("/addvehickle")
 public class CarServletAdd extends HttpServlet {
@@ -22,10 +25,11 @@ public class CarServletAdd extends HttpServlet {
 
         try{
             CarDao.insert(car);
-        } catch (Exception e){
+            response.sendRedirect("/success.html");
+        } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
-        response.sendRedirect("/success.html");
 
     }
 

@@ -21,6 +21,7 @@ public class EmployeeServletEdit extends HttpServlet {
             employees = EmployeeDao.printAllEmployees();
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
         request.setAttribute("employees", employees);
         getServletContext().getRequestDispatcher("/employeeedit.jsp").forward(request,response);

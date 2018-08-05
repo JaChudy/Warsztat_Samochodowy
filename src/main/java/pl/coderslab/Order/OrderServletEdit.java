@@ -21,6 +21,7 @@ public class OrderServletEdit extends HttpServlet {
             orders = OrderDao.printAllOrders();
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
         request.setAttribute("orders", orders);
         getServletContext().getRequestDispatcher("/ordersedit.jsp").forward(request,response);

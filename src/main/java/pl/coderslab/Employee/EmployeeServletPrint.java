@@ -21,8 +21,8 @@ public class EmployeeServletPrint extends HttpServlet {
             employees = EmployeeDao.printAllEmployees();
         } catch (SQLException e) {
             e.printStackTrace();
+            response.sendRedirect("/oops.html");
         }
-
 
         request.setAttribute("employees", employees);
         getServletContext().getRequestDispatcher("/printemployees.jsp").forward(request,response);

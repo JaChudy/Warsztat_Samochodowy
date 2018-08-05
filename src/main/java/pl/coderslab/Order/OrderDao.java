@@ -14,16 +14,13 @@ public class OrderDao {
 
     public static void save(Order order) throws Exception {
         /*
-        * IMPORTANT don't change mydb.order or `order` to order
-        * */
-        String query = "Insert INTO mydb.order (`acceptance_date`,`estimate_start_date`,`problem_details`,`customerid`, `employeeid`, `car_registration_number`) VALUES (? , ?, ?, ?, ?, ?)";
+         * IMPORTANT don't change mydb.order or `order` to order
+         * */
+        String query = "Insert INTO mydb.order (`acceptance_date`,`estimate_start_date`,`problem_details`) VALUES (? , ?, ?)";
         List<String> params = new ArrayList<>();
         params.add(order.getAcceptanceDate());
         params.add(order.getEstimateStartDate());
         params.add(order.getProblemDetails());
-        params.add(String.valueOf(order.getCustomerId()));
-        params.add(String.valueOf(order.getEmployeeID()));
-        params.add(String.valueOf(order.getCarRegNumber()));
         DbService.insertIntoDatabase(query, params);
 
     }
@@ -56,8 +53,8 @@ public class OrderDao {
         }
     }
     /*
-    * TODO Check it
-    * */
+     * TODO Check it
+     * */
     public static void delete(int orderId) {
         String query = "DELETE FROM mydb.order WHERE id =?";
         List<String> params = new ArrayList<>();
