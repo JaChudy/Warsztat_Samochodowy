@@ -4,7 +4,7 @@
 
 Simple car service CRM with DAO
 
-##Technologies used:
+## Technologies used:
 
 * Servlet 
 * JSP
@@ -14,7 +14,7 @@ Simple car service CRM with DAO
     
    
 
-##Basic functions:
+## Basic functions:
 * add, edit, delete clients and their cars
 * add, edit, delete employees
 * order management
@@ -22,7 +22,7 @@ Simple car service CRM with DAO
    
     
     
-##Screenshot from program:
+## Screenshot from program:
 
 ![](https://github.com/JaChudy/Warsztat_Samochodowy/blob/master/1.jpg)
 
