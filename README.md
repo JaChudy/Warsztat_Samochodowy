@@ -27,7 +27,7 @@ Simple car service CRM with DAO
 ![](https://github.com/JaChudy/Warsztat_Samochodowy/blob/master/1.jpg)
 
 
-![](../Warsztat_Samochodowy/2.png)
+![](https://github.com/JaChudy/Warsztat_Samochodowy/blob/master/2.png)
 
 ![](../Warsztat_Samochodowy/3.png)
 
